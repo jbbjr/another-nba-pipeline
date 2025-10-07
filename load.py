@@ -51,7 +51,8 @@ DDL = {
             year INTEGER NOT NULL,
             month INTEGER NOT NULL,
             day_of_week INTEGER NOT NULL,
-            week_number INTEGER NOT NULL
+            week_number INTEGER NOT NULL,
+            season_type TEXT
         )
     """,
     
