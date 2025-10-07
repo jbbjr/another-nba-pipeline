@@ -2,10 +2,10 @@
 
 # File paths
 PARQUET_FILES = {
-    'pbp': '/Users/bennett/Desktop/PBP',
-    'boxscore': '/Users/bennett/Desktop/Boxscores',
-    'players': '/Users/bennett/Repositories/another-nba-pipeline/2024_NBA_Players.parquet',
-    'schedule': '/Users/bennett/Repositories/another-nba-pipeline/2024_NBA_Schedule.parquet'
+    'pbp': 'PBP',
+    'boxscore': 'Boxscores',
+    'players': '2024_NBA_Players.parquet',
+    'schedule': '2024_NBA_Schedule.parquet'
 }
 
 DB_PATH = 'nba.db'
