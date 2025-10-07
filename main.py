@@ -3,18 +3,19 @@
 from extract import read_all
 from transform import transform_all
 from load import load_all
+from config import LOAD_MODE
 
 
 def main():
     """Run the complete ETL pipeline."""
     print("=" * 50)
     print("NBA ETL Pipeline")
+    print(f"Mode: {LOAD_MODE}")
     print("=" * 50)
     
     # Extract
     print("\n[1/3] Extracting data from parquet files...")
     raw_data = read_all()
-    print(f"  ✓ Loaded {len(raw_data)} parquet files")
     
     # Transform
     print("\n[2/3] Transforming data...")
