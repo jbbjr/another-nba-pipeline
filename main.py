@@ -3,7 +3,7 @@
 from extract import read_all
 from transform import transform_all
 from load import load_all
-from config import LOAD_MODE
+from config import LOAD_MODE, RUN_VALIDATION
 
 
 def main():
@@ -25,6 +25,21 @@ def main():
     # Load
     print("\n[3/3] Loading to SQLite...")
     load_all(tables)
+    
+    # Validate (optional)
+    if RUN_VALIDATION:
+        print("\n" + "=" * 50)
+        print("Running Data Quality Validation...")
+        print("=" * 50)
+        
+        try:
+            from validate_data import DataValidator
+            validator = DataValidator()
+            validator.run_all_checks()
+            validator.close()
+        except Exception as e:
+            print(f"⚠️  Validation failed to run: {e}")
+            print("You can run validation manually: python validate_data.py")
     
     print("\n" + "=" * 50)
     print("ETL Complete!")

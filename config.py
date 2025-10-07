@@ -16,5 +16,8 @@ LOAD_MODE = 'UPSERT'  # Options: 'FULL_REFRESH', 'UPSERT'
 # FULL_REFRESH: Drops and recreates all tables (fast but destructive)
 # UPSERT: Merges new data with existing (idempotent, safe for re-runs)
 
+# Data Quality
+RUN_VALIDATION = True  # Run data quality checks after ETL
+
 # ETL settings
 BATCH_SIZE = 30  # SQLite chunk size to avoid 999 variable limit
