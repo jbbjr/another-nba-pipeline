@@ -334,16 +334,16 @@ Top statistical performers for each game.
 
 | Target Table | Source Data | Transformation Notes |
 |--------------|-------------|----------------------|
-| dim_teams | players.csv, schedule.csv | Deduplicated across sources |
-| dim_players | players.csv | Latest player attributes (SCD Type 1) |
-| dim_arenas | schedule.csv | Generated synthetic keys |
-| dim_dates | schedule.csv | Standard date dimension |
-| fact_player_roster | players.csv | Direct mapping with type conversions |
-| fact_games | schedule.csv | Includes time-variant standings |
-| fact_team_game_stats | boxscore.csv | Unpacked from homeTeam/awayTeam aggregates |
-| fact_player_game_stats | boxscore.csv | Unpacked from nested player arrays |
-| fact_play_by_play | pbp.csv | Running totals calculated |
-| fact_game_leaders | schedule.csv | Unpacked from pointsLeaders object |
+| dim_teams | players.parquet, schedule.parquet | Deduplicated across sources |
+| dim_players | players.parquet | Latest player attributes (SCD Type 1) |
+| dim_arenas | schedule.parquet | Generated synthetic keys |
+| dim_dates | schedule.parquet | Standard date dimension |
+| fact_player_roster | players.parquet | Direct mapping with type conversions |
+| fact_games | schedule.parquet | Includes time-variant standings |
+| fact_team_game_stats | boxscore.parquet | Unpacked from homeTeam/awayTeam aggregates |
+| fact_player_game_stats | boxscore.parquet | Unpacked from nested player arrays |
+| fact_play_by_play | pbp.parquet | Running totals calculated |
+| fact_game_leaders | schedule.parquet | Unpacked from pointsLeaders object |
 
 ## ERD
 
